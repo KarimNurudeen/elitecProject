@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 100%;
+    --foreground: 203 100% 23%; /* Deep Navy #004976 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 203 100% 23%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 203 100% 23%;
+
+    /* Primary - Cyan #00baee */
+    --primary: 195 100% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Deep Navy for hover states */
+    --secondary: 203 100% 23%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 96%; /* Light Gray #F4F4F4 */
+    --muted-foreground: 203 50% 40%;
+
+    /* Accent - Cyan (same as primary) */
+    --accent: 195 100% 47%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Yellow accent */
+    --yellow: 42 100% 75%; /* #FFD57F */
+    --yellow-foreground: 203 100% 23%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 195 100% 47%;
+
+    --radius: 0.5rem;
+
+    /* Custom colors */
+    --navy: 203 100% 23%; /* Deep Navy #004976 */
+    --cyan: 195 100% 47%; /* Primary Cyan #00baee */
+  }
+
+  .dark {
+    --background: 203 100% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 203 80% 15%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 203 80% 15%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Primary - Cyan #00baee */
+    --primary: 195 100% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Deep Navy */
+    --secondary: 203 100% 23%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 203 60% 20%;
+    --muted-foreground: 203 20% 65%;
+
+    /* Accent - Cyan */
+    --accent: 195 100% 47%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Yellow accent */
+    --yellow: 42 100% 75%;
+    --yellow-foreground: 203 100% 23%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 203 60% 25%;
+    --input: 203 60% 25%;
+    --ring: 195 100% 47%;
+
+    /* Custom colors */
+    --navy: 203 100% 23%;
+    --cyan: 195 100% 47%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Outfit', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+  }
+}
